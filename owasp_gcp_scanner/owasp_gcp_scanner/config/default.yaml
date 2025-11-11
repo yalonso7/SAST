@@ -1,0 +1,14 @@
+concurrent_workers: 8
+output_dir: owasp_gcp_scanner/output
+output_format:
+  - json
+  - csv
+
+# If include_projects is empty, scanner will list all ACTIVE projects accessible
+include_projects: []
+exclude_projects: []
+
+# Future thresholds and knobs for checks
+thresholds:
+  sql_require_ssl: true
+  firewall_sensitive_ports: [22, 3389]
